@@ -1,0 +1,28 @@
+http://purl.obolibrary.org/obo/GO_0008150 # biological process
+http://www.ebi.ac.uk/efo/EFO_0005803 # blood and lymphatic system disorders
+http://www.ebi.ac.uk/efo/EFO_0003777 # heart disease
+http://www.ebi.ac.uk/efo/OTAR_0000018 # congenital, familial and genetic disorders
+http://purl.obolibrary.org/obo/MONDO_0021205 # disease of ear
+http://www.ebi.ac.uk/efo/EFO_0001379 # endocrine system disease
+http://purl.obolibrary.org/obo/MONDO_0024458 # disease of visual system
+http://www.ifomis.org/bfo/1.1/snap#Function # function
+http://www.ebi.ac.uk/efo/OTAR_0000013 # gastrointestinal disorder
+http://purl.obolibrary.org/obo/MONDO_0002515 # hepatobiliary disorder
+http://www.ebi.ac.uk/efo/EFO_0000540 # immune system disease
+http://www.ebi.ac.uk/efo/EFO_0005741 # infectious disease
+http://www.ebi.ac.uk/efo/OTAR_0000009 # injury, poisoning and complications
+http://purl.obolibrary.org/obo/MONDO_0002051 # integumentary system disease
+http://www.ebi.ac.uk/efo/EFO_0001444 # measurement
+http://purl.obolibrary.org/obo/MONDO_0024297 # metabolism and nutrition disorder
+http://www.ebi.ac.uk/efo/OTAR_0000006 # musculoskeletal and connective tissue disorders
+http://purl.obolibrary.org/obo/MONDO_0045024 # cell proliferation disorder
+http://www.ebi.ac.uk/efo/EFO_0009605 # pancreas disease
+http://www.ebi.ac.uk/efo/EFO_0000651 # phenotype
+http://www.ebi.ac.uk/efo/OTAR_0000014 # pregnancy, puerperium and perinatal conditions
+http://purl.obolibrary.org/obo/MONDO_0002025 # psychiatric disorder
+http://www.ebi.ac.uk/efo/EFO_0009690 # urinary system disease
+http://www.ebi.ac.uk/efo/OTAR_0000017 # reproductive system and breast disorders
+http://www.ebi.ac.uk/efo/OTAR_0000010 # respiratory, thoracic and mediastinal disorders
+http://www.ebi.ac.uk/efo/EFO_0004264 # vascular disorder
+http://www.ebi.ac.uk/efo/EFO_0000618 # nervous system disease
+http://www.ebi.ac.uk/efo/EFO_0005932 # animal disease

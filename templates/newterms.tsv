@@ -1,0 +1,14 @@
+ID	Label	Type (is-a)	Disease location	Definition	Synonym	Narrow synonym
+ID	A rdfs:label	SC %	EC disease and (has_disease_location some (%  or (part_of some %)))	A obo:IAO_0000115	A oboInOwl:hasExactSynonym SPLIT=||	A oboInOwl:hasNarrowSynonym SPLIT=||
+OTAR:0000001	blood disease	EFO:0005803	blood	A disease involving the blood.		
+OTAR:0000003	cyst	MONDO:0045024		A sac-like closed membranous structure that may be empty or contain fluid or amorphous material. [ NCIT:C2978 ]		
+OTAR:0000006	musculoskeletal or connective tissue disease	EFO:0000408		A disease involving the musculoskeletal or connective tissue system.		
+OTAR:0000008	other	EFO:0000408				
+OTAR:0000009	injury, poisoning or other complication	EFO:0000408		Damage inflicted on the body as the direct of indirect result of an external force, or the ingestion, injection, inhalation or exposure to a deleterious agent or any disease that occurs during the course of, or because of, another disease, treatment, or procedure.		
+OTAR:0000010	respiratory or thoracic disease	EFO:0000408		A disease affecting the respiratory system or other thoracic organs.		
+OTAR:0000013	gastrointestinal disease	EFO:0000408	UBERON:0005409	Any disease that occurs within the gastrointestinal tract, a series of hollow organs that form a long continuous passage from mouth to anus including the mouth, esophagus, stomach, small intestine, large intestine and anus.		
+OTAR:0000014	pregnancy or perinatal disease	EFO:0000408		A disease occurring during pregnancy or shortly after birth affecting the mother or child.	pregnancy or perinatal disorder||pregnancy or perinatal condition	
+OTAR:0000015	perinatal disease	OTAR:0000014		A condition affecting an unborn or newly born individual, where the perinatal period is defined in humans as commencing at 22 completed weeks (154 days) of gestation and ending seven completed days after birth. Other, broader definitions of perinatal period cover five months before birth to one month after birth.	perinatal condition||perinatal disorder	
+OTAR:0000017	reproductive system or breast disease	EFO:0000408		A disease involving the reproductive system or the breast.		
+OTAR:0000018	genetic, familial or congenital disease	EFO:0000408		A disease caused by genetic modifications inherited from parents genome, occurring in or affecting members of a family more than expected by chance or existing at, and usually before, birth.		
+OTAR:0000019	familial disease	OTAR:0000018		A disease occurring in or affecting members of a family more than would be expected by chance		
