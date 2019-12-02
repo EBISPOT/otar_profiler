@@ -11,7 +11,8 @@ DELETE {?blood rdfs:label "hematologic disease".
 				?ear rdfs:label "disease of ear".
 				?visual rdfs:label "disease of visual system" .
 				?metabolic rdfs:label "nutritional or metabolic disease" .
-				?parasitic rdfs:label "parasitic infection" .}
+				?parasitic rdfs:label "parasitic infection" .
+				?psychiatric rdfs:label "psychiatric disorder" .}
 
 INSERT {?blood rdfs:label "hematologic or lymphatic system disease" .
 				?cpd rdfs:label "neoplastic, precancerous and hyperplastic disease".
@@ -19,7 +20,8 @@ INSERT {?blood rdfs:label "hematologic or lymphatic system disease" .
 				?ear rdfs:label "ear disease".
 				?visual rdfs:label "visual system disease" .
 				?metabolic rdfs:label "metabolic or nutritional disease" .
-				?parasitic rdfs:label "parasitic infestation" .}
+				?parasitic rdfs:label "parasitic infestation" .
+				?psychiatric rdfs:label "psychiatric disease" .}
 
 WHERE {
 	?blood a owl:Class .
@@ -36,4 +38,6 @@ WHERE {
 	?metabolic rdfs:label "nutritional or metabolic disease" .
 	?parasitic a owl:Class .
 	?parasitic rdfs:label "parasitic infection" .
+	?psychiatric a owl:Class .
+	?psychiatric rdfs:label "psychiatric disorder" .
 	}

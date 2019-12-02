@@ -3,7 +3,6 @@ http://purl.obolibrary.org/obo/MONDO_0021199
 http://www.ebi.ac.uk/efo/EFO_0000319
 http://purl.obolibrary.org/obo/MONDO_0021195
 http://www.ebi.ac.uk/efo/EFO_0001058
-http://purl.obolibrary.org/obo/MONDO_0000651
 http://purl.obolibrary.org/obo/MONDO_0024505
 http://purl.obolibrary.org/obo/MONDO_0018652
 http://www.ebi.ac.uk/efo/EFO_0009470
@@ -60,3 +59,4 @@ http://purl.obolibrary.org/obo/MONDO_0020150
 http://www.ebi.ac.uk/efo/EFO_0009664
 http://purl.obolibrary.org/obo/MONDO_0024627
 http://purl.obolibrary.org/obo/MONDO_0021016
+http://purl.obolibrary.org/obo/MONDO_0002436
