@@ -1,7 +1,7 @@
 http://www.ebi.ac.uk/efo/OTAR_0000009
 http://www.ebi.ac.uk/efo/EFO_0005932
 http://purl.obolibrary.org/obo/MONDO_0045024
-http://purl.obolibrary.org/obo/MONDO_0002051
+http://www.ebi.ac.uk/efo/EFO_0010285
 http://www.ebi.ac.uk/efo/EFO_0001379
 http://www.ebi.ac.uk/efo/EFO_0003777
 http://www.ifomis.org/bfo/1.1/snap#Function
@@ -10,7 +10,7 @@ http://www.ebi.ac.uk/efo/EFO_0009605
 http://purl.obolibrary.org/obo/MONDO_0021205
 http://www.ebi.ac.uk/efo/EFO_0000618
 http://www.ebi.ac.uk/efo/EFO_0005803
-http://purl.obolibrary.org/obo/MONDO_0002515
+http://purl.obolibrary.org/obo/EFO_0010284
 http://www.ebi.ac.uk/efo/OTAR_0000016
 http://www.ebi.ac.uk/efo/EFO_0000651
 http://www.ebi.ac.uk/efo/OTAR_0000018
@@ -24,7 +24,7 @@ http://www.ebi.ac.uk/efo/EFO_0004264
 http://www.ebi.ac.uk/efo/OTAR_0000010
 http://www.ebi.ac.uk/efo/OTAR_0000014
 http://www.ebi.ac.uk/efo/OTAR_0000011
-http://www.ebi.ac.uk/efo/OTAR_0000013
+http://www.ebi.ac.uk/efo/EFO_0010282
 http://www.ebi.ac.uk/efo/EFO_0001444
 http://www.ebi.ac.uk/efo/EFO_0009690
 http://www.ebi.ac.uk/efo/EFO_0005741

@@ -8,7 +8,7 @@ PREFIX xml: <https://www.w3.org/TR/xml#>
 
 DELETE {?c rdfs:subClassOf <http://www.ebi.ac.uk/efo/EFO_0000405>.}
 
-INSERT {?c rdfs:subClassOf <http://www.ebi.ac.uk/efo/OTAR_0000013>.}
+INSERT {?c rdfs:subClassOf <http://www.ebi.ac.uk/efo/EFO_0010282>.}
 	
 WHERE {
 	?c a owl:Class .

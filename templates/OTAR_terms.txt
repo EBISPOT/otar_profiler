@@ -6,12 +6,12 @@ http://purl.obolibrary.org/obo/MONDO_0021205 # disease of ear
 http://www.ebi.ac.uk/efo/EFO_0001379 # endocrine system disease
 http://purl.obolibrary.org/obo/MONDO_0024458 # disease of visual system
 http://www.ifomis.org/bfo/1.1/snap#Function # function
-http://www.ebi.ac.uk/efo/OTAR_0000013 # gastrointestinal disorder
-http://purl.obolibrary.org/obo/MONDO_0002515 # hepatobiliary disorder
+http://www.ebi.ac.uk/efo/EFO_0010282 # gastrointestinal disorder
+http://purl.obolibrary.org/obo/EFO_0010284 # hepatobiliary disorder
 http://www.ebi.ac.uk/efo/EFO_0000540 # immune system disease
 http://www.ebi.ac.uk/efo/EFO_0005741 # infectious disease
 http://www.ebi.ac.uk/efo/OTAR_0000009 # injury, poisoning and complications
-http://purl.obolibrary.org/obo/MONDO_0002051 # integumentary system disease
+http://www.ebi.ac.uk/efo/EFO_0010285 # integumentary system disease
 http://www.ebi.ac.uk/efo/EFO_0001444 # measurement
 http://purl.obolibrary.org/obo/MONDO_0024297 # metabolism and nutrition disorder
 http://www.ebi.ac.uk/efo/OTAR_0000006 # musculoskeletal and connective tissue disorders
