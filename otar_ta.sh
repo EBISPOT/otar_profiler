@@ -13,7 +13,7 @@ robot reason -i ./build/done.owl -s true -m true -r hermit -o ./build/efo_inferr
 #The below needs to be run once and the relevant terms removed from the file. - should be updated to automatically do this.
 #robot query -i ./build/efo_inferred.owl -q ./sparql/tadisease.sparql ./templates/disease_p_ta.txt && echo "Parents extracted..."
 
-robot remove -i ./build/efo_inferred.owl -T ./templates/disease_p_ta.txt -o ./build/efo_ta.owl && echo "Removed parents..."
+robot remove -i ./build/efo_inferred.owl -T ./templates/disease_p_ta.txt -p true -o ./build/efo_ta.owl && echo "Removed parents..."
 
 #robot remove -i ./build/efo_ta.owl -T ./templates/disease_ta.txt --select equivalents -o ./build/efo_ta_equivalents.owl && echo "Removed equivalents..."
 

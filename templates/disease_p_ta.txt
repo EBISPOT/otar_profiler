@@ -29,7 +29,6 @@ http://purl.obolibrary.org/obo/MONDO_0100079
 http://purl.obolibrary.org/obo/MONDO_0021670
 http://purl.obolibrary.org/obo/MONDO_0021674
 http://purl.obolibrary.org/obo/MONDO_0021673
-http://purl.obolibrary.org/obo/MONDO_0021669
 http://purl.obolibrary.org/obo/MONDO_0044990
 http://purl.obolibrary.org/obo/MONDO_0044989
 http://purl.obolibrary.org/obo/MONDO_0044967
