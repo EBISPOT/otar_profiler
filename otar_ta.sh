@@ -1,10 +1,11 @@
-# NEED TO CURL EFO
+# NEED TO COPY EFO AND disease_to_phenotype
+
 #Create template owl files for new terms and dictating subclass relationships
 robot template --template ./templates/newterms.tsv --prefix "OTAR: http://www.ebi.ac.uk/efo/OTAR_" --prefix "EFO: http://www.ebi.ac.uk/efo/EFO_" --prefix "MONDO: http://purl.obolibrary.org/obo/MONDO_" --prefix "UBERON: http://purl.obolibrary.org/obo/UBERON_" --prefix "BFO: http://purl.obolibrary.org/obo/BFO_" -i efo.owl -o ./build/new.owl && echo "New terms template created..."
 robot template --template ./templates/subclasses.tsv --prefix "OTAR: http://www.ebi.ac.uk/efo/OTAR_" --prefix "EFO: http://www.ebi.ac.uk/efo/EFO_" --prefix "UBERON: http://purl.obolibrary.org/obo/UBERON_" --prefix "BFO: http://purl.obolibrary.org/obo/BFO_" --prefix "MONDO: http://purl.obolibrary.org/obo/MONDO_" --prefix "Orphanet: http://www.orpha.net/ORDO/Orphanet_" -i efo.owl -o ./build/subclasses.owl && echo "New subclasses template created..."
 
 #Create the slim
-robot merge -i ./build/new.owl -i ./build/subclasses.owl -i efo.owl \
+robot merge -i ./build/new.owl -i ./build/subclasses.owl -i efo.owl -i disease_to_phenotype.owl \
 	filter --term-file ./templates/OTAR_terms.txt --select annotations \
 	query --query ./sparql/OTAR_therapeutic_areas.sparql ./build/tagged.owl && echo "Tagged the therapeutic areas..."
 robot merge -i ./build/new.owl -i ./build/subclasses.owl -i efo.owl -i ./build/tagged.owl -o ./build/done.owl && echo "Merged the templates..."
