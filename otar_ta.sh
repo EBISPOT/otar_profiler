@@ -5,7 +5,7 @@ robot template --template ./templates/newterms.tsv --prefix "OTAR: http://www.eb
 robot template --template ./templates/subclasses.tsv --prefix "OTAR: http://www.ebi.ac.uk/efo/OTAR_" --prefix "EFO: http://www.ebi.ac.uk/efo/EFO_" --prefix "UBERON: http://purl.obolibrary.org/obo/UBERON_" --prefix "BFO: http://purl.obolibrary.org/obo/BFO_" --prefix "MONDO: http://purl.obolibrary.org/obo/MONDO_" --prefix "Orphanet: http://www.orpha.net/ORDO/Orphanet_" -i efo.owl -o ./build/subclasses.owl && echo "New subclasses template created..."
 
 #Create the slim
-robot merge -i ./build/new.owl -i ./build/subclasses.owl -i efo.owl -i disease_to_phenotype.owl \
+robot merge -i ./build/new.owl -i ./build/subclasses.owl -i efo.owl \
 	filter --term-file ./templates/OTAR_terms.txt --select annotations \
 	query --query ./sparql/OTAR_therapeutic_areas.sparql ./build/tagged.owl && echo "Tagged the therapeutic areas..."
 robot merge -i ./build/new.owl -i ./build/subclasses.owl -i efo.owl -i ./build/tagged.owl -o ./build/done.owl && echo "Merged the templates..."
@@ -44,7 +44,8 @@ robot query -i ./build/ta_fixed.owl -u ./sparql/pregnancy.ru \
 	query -u ./sparql/metabolic.ru \
 	query -u ./sparql/hepatitis.ru \
 	query -u ./sparql/poisoning.ru \
-	query -u ./sparql/heart.ru -o efo_otar_profile.owl && echo "Fixed specific terms... Build complete!"
+	query -u ./sparql/heart.ru \
+	merge -i disease_to_phenotype.owl -o efo_otar_profile.owl && echo "Fixed specific terms... Build complete!"
 	
 robot extract -m MIREOT -i efo_otar_profile.owl --branch-from-terms ./templates/allTAs.txt -o efo_otar_slim.owl
 	
