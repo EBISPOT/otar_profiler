@@ -27,3 +27,4 @@ http://www.ebi.ac.uk/efo/EFO_0001444
 http://www.ebi.ac.uk/efo/EFO_0009690
 http://www.ebi.ac.uk/efo/EFO_0005741
 http://www.ebi.ac.uk/efo/EFO_0000319
+http://www.ebi.ac.uk/efo/EFO_0000651
