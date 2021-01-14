@@ -44,7 +44,8 @@ robot query -i ./build/ta_fixed.owl -u ./sparql/pregnancy.ru \
 	query -u ./sparql/metabolic.ru \
 	query -u ./sparql/hepatitis.ru \
 	query -u ./sparql/poisoning.ru \
-	query -u ./sparql/heart.ru -o efo_otar_profile.owl && echo "Fixed specific terms... Build complete!"
+	query -u ./sparql/heart.ru \ -o efo_otar_profile.owl && echo "Fixed specific terms... Build complete!"
+# merge -i disease_to_phenotype.owl added to the above to add d2p module
 	
 robot extract -m MIREOT -i efo_otar_profile.owl --branch-from-terms ./templates/allTAs.txt -o efo_otar_slim.owl
 
