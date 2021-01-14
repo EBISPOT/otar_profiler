@@ -48,5 +48,7 @@ robot query -i ./build/ta_fixed.owl -u ./sparql/pregnancy.ru \
 	merge -i disease_to_phenotype.owl -o efo_otar_profile.owl && echo "Fixed specific terms... Build complete!"
 	
 robot extract -m MIREOT -i efo_otar_profile.owl --branch-from-terms ./templates/allTAs.txt -o efo_otar_slim.owl
+
+robot verify -i efo_otar_profile.owl --queries ./sparql/deprecated.sparql ./sparql/no-label.sparql -O reports/
 	
 	
