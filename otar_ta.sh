@@ -9,12 +9,12 @@ robot merge -i ./build/new.owl -i ./build/subclasses.owl -i efo.owl \
 	filter --term-file ./templates/OTAR_terms.txt --select annotations \
 	query --query ./sparql/OTAR_therapeutic_areas.sparql ./build/tagged.owl && echo "Tagged the therapeutic areas..."
 robot merge -i ./build/new.owl -i ./build/subclasses.owl -i efo.owl -i ./build/tagged.owl -o ./build/done.owl && echo "Merged the templates..."
-robot reason -i ./build/done.owl -s true -m true -r hermit -o ./build/efo_inferred.owl && echo "Reasoner done..."
+#robot reason -i ./build/done.owl -s true -m true -r hermit -o ./build/efo_inferred.owl && echo "Reasoner done..."
 
 #The below needs to be run once and the relevant terms removed from the file. - should be updated to automatically do this.
 #robot query -i ./build/efo_inferred.owl -q ./sparql/tadisease.sparql ./templates/disease_p_ta.txt && echo "Parents extracted..."
 
-robot remove -i ./build/efo_inferred.owl -T ./templates/disease_p_ta.txt -p true -o ./build/efo_ta.owl && echo "Removed parents..."
+robot remove -i ./build/done.owl -T ./templates/disease_p_ta.txt -p true -o ./build/efo_ta.owl && echo "Removed parents..."
 
 #robot remove -i ./build/efo_ta.owl -T ./templates/disease_ta.txt --select equivalents -o ./build/efo_ta_equivalents.owl && echo "Removed equivalents..."
 
@@ -44,10 +44,16 @@ robot query -i ./build/ta_fixed.owl -u ./sparql/pregnancy.ru \
 	query -u ./sparql/metabolic.ru \
 	query -u ./sparql/hepatitis.ru \
 	query -u ./sparql/poisoning.ru \
-	query -u ./sparql/heart.ru \ -o efo_otar_profile.owl && echo "Fixed specific terms... Build complete!"
+	query -u ./sparql/heart.ru -o efo_otar_profile.owl && echo "Fixed specific terms... Build complete!"
 # merge -i disease_to_phenotype.owl added to the above to add d2p module
-	
-robot extract -m MIREOT -i efo_otar_profile.owl --branch-from-terms ./templates/allTAs.txt -o efo_otar_slim.owl
+
+#old generation of slim file	
+#robot extract -m MIREOT -i efo_otar_profile.owl --branch-from-terms ./templates/allTAs.txt -c true -o efo_otar_slim.owl
+
+robot query -i efo_otar_profile.owl -q ./sparql/obsolete.sparql obsolete.txt
+robot filter -i efo_otar_profile.owl -T obsolete.txt --select "annotations self" -o obsoletes.owl
+robot filter --input efo_otar_profile.owl -T ./templates/allTAs.txt --select "annotations self descendants"  merge -i obsoletes.owl -o efo_otar_slim.owl
+
 
 robot verify -i efo_otar_profile.owl --queries ./sparql/deprecated.sparql ./sparql/no-label.sparql -O reports/
 	
