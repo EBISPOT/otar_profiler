@@ -53,7 +53,7 @@ robot query -i ./build/ta_fixed.owl -u ./sparql/pregnancy.ru \
 
 robot query -i efo_otar_profile.owl -q ./sparql/obsolete.sparql obsolete.txt
 robot filter -i efo_otar_profile.owl -T obsolete.txt --select "annotations self" -o obsoletes.owl
-robot filter --input efo_otar_profile.owl -T ./templates/allTAs.txt --select "annotations self descendants"  merge -i obsoletes.owl -o efo_otar_slim.owl
+robot remove --input efo_otar_profile.owl --term MONDO:0045031 --axioms EquivalentClasses filter -T ./templates/allTAs.txt --select "annotations self children"  merge -i obsoletes.owl -o efo_otar_slim.owl
 
 
 robot verify -i efo_otar_profile.owl --queries ./sparql/deprecated.sparql ./sparql/no-label.sparql -O reports/
