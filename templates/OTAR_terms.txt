@@ -12,7 +12,7 @@ http://www.ebi.ac.uk/efo/EFO_0005741
 http://www.ebi.ac.uk/efo/OTAR_0000009 
 http://www.ebi.ac.uk/efo/EFO_0010285 
 http://www.ebi.ac.uk/efo/EFO_0001444 
-http://purl.obolibrary.org/obo/MONDO_0024297 
+http://www.ebi.ac.uk/efo/OTAR_0000020 
 http://www.ebi.ac.uk/efo/OTAR_0000006 
 http://purl.obolibrary.org/obo/MONDO_0045024 
 http://www.ebi.ac.uk/efo/EFO_0009605 
@@ -25,3 +25,4 @@ http://www.ebi.ac.uk/efo/OTAR_0000010
 http://www.ebi.ac.uk/efo/EFO_0000618 
 http://www.ebi.ac.uk/efo/EFO_0005932 
 http://www.ebi.ac.uk/efo/EFO_0000319
+http://purl.obolibrary.org/obo/MONDO_0100336

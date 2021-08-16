@@ -41,7 +41,6 @@ robot query -i ./build/efo_ta.owl -u ./sparql/classify.ru \
 #5) moved poisoning to directly under TA
 robot query -i ./build/ta_fixed.owl -u ./sparql/pregnancy.ru \
 	query -u ./sparql/tongue.ru \
-	query -u ./sparql/metabolic.ru \
 	query -u ./sparql/hepatitis.ru \
 	query -u ./sparql/poisoning.ru \
 	query -u ./sparql/heart.ru \
@@ -53,7 +52,7 @@ robot query -i ./build/ta_fixed.owl -u ./sparql/pregnancy.ru \
 
 robot query -i efo_otar_profile.owl -q ./sparql/obsolete.sparql obsolete.txt
 robot filter -i efo_otar_profile.owl -T obsolete.txt --select "annotations self" -o obsoletes.owl
-robot reason reduce --input efo_otar_profile.owl filter -T ./templates/allTAs.txt --select "annotations self descendants"  merge -i obsoletes.owl -o efo_otar_slim.owl
+robot reason --input efo_otar_profile.owl reduce filter -T ./templates/allTAs.txt --select "annotations self descendants"  merge -i obsoletes.owl -o efo_otar_slim.owl
 
 
 robot verify -i efo_otar_profile.owl --queries ./sparql/deprecated.sparql ./sparql/no-label.sparql -O reports/

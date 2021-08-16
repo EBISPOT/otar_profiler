@@ -35,7 +35,7 @@ WHERE {
 	?visual a owl:Class .
 	?visual rdfs:label "disease of visual system" .
 	?metabolic a owl:Class .
-	?metabolic rdfs:label "nutritional or metabolic disease" .
+	?metabolic rdfs:label "metabolic disease" .
 	?parasitic a owl:Class .
 	?parasitic rdfs:label "parasitic infection" .
 	?psychiatric a owl:Class .
