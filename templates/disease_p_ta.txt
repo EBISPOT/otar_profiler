@@ -61,3 +61,5 @@ http://purl.obolibrary.org/obo/MONDO_0002436
 http://purl.obolibrary.org/obo/MONDO_0700007
 http://purl.obolibrary.org/obo/MONDO_0044988
 http://purl.obolibrary.org/obo/MONDO_0043543
+http://purl.obolibrary.org/obo/MONDO_0100366
+http://purl.obolibrary.org/obo/MONDO_0016177
