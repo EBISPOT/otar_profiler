@@ -26,3 +26,5 @@ http://www.ebi.ac.uk/efo/EFO_0000618
 http://www.ebi.ac.uk/efo/EFO_0005932 
 http://www.ebi.ac.uk/efo/EFO_0000319
 http://purl.obolibrary.org/obo/MONDO_0100336
+http://www.ebi.ac.uk/efo/EFO_0002571
+
