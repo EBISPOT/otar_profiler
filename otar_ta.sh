@@ -1,5 +1,7 @@
 # NEED TO COPY EFO AND disease_to_phenotype
 
+set -e
+
 #Create template owl files for new terms and dictating subclass relationships
 robot template --template ./templates/newterms.tsv --prefix "OTAR: http://www.ebi.ac.uk/efo/OTAR_" --prefix "EFO: http://www.ebi.ac.uk/efo/EFO_" --prefix "MONDO: http://purl.obolibrary.org/obo/MONDO_" --prefix "UBERON: http://purl.obolibrary.org/obo/UBERON_" --prefix "BFO: http://purl.obolibrary.org/obo/BFO_" -i efo.owl -o ./build/new.owl && echo "New terms template created..."
 robot template --template ./templates/subclasses.tsv --prefix "OTAR: http://www.ebi.ac.uk/efo/OTAR_" --prefix "EFO: http://www.ebi.ac.uk/efo/EFO_" --prefix "UBERON: http://purl.obolibrary.org/obo/UBERON_" --prefix "BFO: http://purl.obolibrary.org/obo/BFO_" --prefix "MONDO: http://purl.obolibrary.org/obo/MONDO_" --prefix "Orphanet: http://www.orpha.net/ORDO/Orphanet_" -i efo.owl -o ./build/subclasses.owl && echo "New subclasses template created..."
@@ -52,9 +54,9 @@ robot query -i ./build/ta_fixed.owl -u ./sparql/pregnancy.ru \
 
 robot query -i efo_otar_profile.owl -q ./sparql/obsolete.sparql obsolete.txt
 robot filter -i efo_otar_profile.owl -T obsolete.txt --select "annotations self" -o obsoletes.owl
-robot reason --input efo_otar_profile.owl reduce filter -T ./templates/allTAs.txt --select "annotations self descendants"  merge -i obsoletes.owl -o efo_otar_slim.owl
-
+robot query -i efo.owl --query ./sparql/materialise-has-location.sparql ./build/has-disease-location.owl
+robot filter --input ./build/has-disease-location.owl -T ./templates/allTAs.txt --select "annotations self descendants" -o ./build/has-disease-location-filtered.owl
+robot reason --input efo_otar_profile.owl reduce filter -T ./templates/allTAs.txt --select "annotations self descendants"  merge -i obsoletes.owl -i ./build/has-disease-location-filtered.owl -o efo_otar_slim.owl
 
 robot verify -i efo_otar_profile.owl --queries ./sparql/deprecated.sparql ./sparql/no-label.sparql -O reports/
-	
-	
+
