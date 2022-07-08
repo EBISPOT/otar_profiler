@@ -52,11 +52,11 @@ robot query -i ./build/ta_fixed.owl -u ./sparql/pregnancy.ru \
 #old generation of slim file	
 #robot extract -m MIREOT -i efo_otar_profile.owl --branch-from-terms ./templates/allTAs.txt -c true -o efo_otar_slim.owl
 
+
 robot query -i efo_otar_profile.owl -q ./sparql/obsolete.sparql obsolete.txt
 robot filter -i efo_otar_profile.owl -T obsolete.txt --select "annotations self" -o obsoletes.owl
-robot query -i efo.owl --query ./sparql/materialise-has-location.sparql ./build/has-disease-location.owl
-robot filter --input ./build/has-disease-location.owl -T ./templates/allTAs.txt --select "annotations self descendants" -o ./build/has-disease-location-filtered.owl
-robot reason --input efo_otar_profile.owl reduce filter -T ./templates/allTAs.txt --select "annotations self descendants"  merge -i obsoletes.owl -i ./build/has-disease-location-filtered.owl -o efo_otar_slim.owl
+robot relax -i efo.owl query --query ./sparql/materialise-has-location.sparql ./build/has-disease-location.owl
+robot reason --input efo_otar_profile.owl merge -i ./build/has-disease-location.owl filter -T ./templates/allTAs.txt --select "annotations self descendants"  merge -i obsoletes.owl -o efo_otar_slim.owl
 
 robot verify -i efo_otar_profile.owl --queries ./sparql/deprecated.sparql ./sparql/no-label.sparql -O reports/
 

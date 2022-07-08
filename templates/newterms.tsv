@@ -1,12 +1,13 @@
-ID	Label	Type (is-a)	Disease location	Definition	Synonym	Narrow synonym
-ID	A rdfs:label	SC %	EC disease and (has_disease_location some (%  or (part_of some %)))	A obo:IAO_0000115	A oboInOwl:hasExactSynonym SPLIT=||	A oboInOwl:hasNarrowSynonym SPLIT=||
-OTAR:0000003	cyst	MONDO:0045024		A sac-like closed membranous structure that may be empty or contain fluid or amorphous material. [ NCIT:C2978 ]		
-OTAR:0000006	musculoskeletal or connective tissue disease	EFO:0000408		A disease involving the musculoskeletal or connective tissue system.		
-OTAR:0000008	other	EFO:0000408				
-OTAR:0000009	injury, poisoning or other complication	EFO:0000408		Damage inflicted on the body as the direct of indirect result of an external force, or the ingestion, injection, inhalation or exposure to a deleterious agent or any disease that occurs during the course of, or because of, another disease, treatment, or procedure.		
-OTAR:0000010	respiratory or thoracic disease	EFO:0000408		A disease affecting the respiratory system or other thoracic organs.		
-OTAR:0000014	pregnancy or perinatal disease	EFO:0000408		A disease occurring during pregnancy or shortly after birth affecting the mother or child.	pregnancy or perinatal disorder||pregnancy or perinatal condition	
-OTAR:0000017	reproductive system or breast disease	EFO:0000408		A disease involving the reproductive system or the breast.		
-OTAR:0000018	genetic, familial or congenital disease	EFO:0000408		A disease caused by genetic modifications inherited from parents genome, occurring in or affecting members of a family more than expected by chance or existing at, and usually before, birth.		
-OTAR:0000019	familial disease	OTAR:0000018		A disease occurring in or affecting members of a family more than would be expected by chance		
+ID	Label	Type (is-a)	Disease location	Definition	Synonym	Narrow synonym	Type
+ID	A rdfs:label	SC %	EC disease and (has_disease_location some (%  or (part_of some %)))	A obo:IAO_0000115	A oboInOwl:hasExactSynonym SPLIT=||	A oboInOwl:hasNarrowSynonym SPLIT=||	TYPE
+OTAR:0000003	cyst	MONDO:0045024		A sac-like closed membranous structure that may be empty or contain fluid or amorphous material. [ NCIT:C2978 ]			
+OTAR:0000006	musculoskeletal or connective tissue disease	EFO:0000408		A disease involving the musculoskeletal or connective tissue system.			
+OTAR:0000008	other	EFO:0000408					
+OTAR:0000009	injury, poisoning or other complication	EFO:0000408		Damage inflicted on the body as the direct of indirect result of an external force, or the ingestion, injection, inhalation or exposure to a deleterious agent or any disease that occurs during the course of, or because of, another disease, treatment, or procedure.			
+OTAR:0000010	respiratory or thoracic disease	EFO:0000408		A disease affecting the respiratory system or other thoracic organs.			
+OTAR:0000014	pregnancy or perinatal disease	EFO:0000408		A disease occurring during pregnancy or shortly after birth affecting the mother or child.	pregnancy or perinatal disorder||pregnancy or perinatal condition			
+OTAR:0000017	reproductive system or breast disease	EFO:0000408		A disease involving the reproductive system or the breast.			
+OTAR:0000018	genetic, familial or congenital disease	EFO:0000408		A disease caused by genetic modifications inherited from parents genome, occurring in or affecting members of a family more than expected by chance or existing at, and usually before, birth.			
+OTAR:0000019	familial disease	OTAR:0000018		A disease occurring in or affecting members of a family more than would be expected by chance			
 OTAR:0000020	nutritional or metabolic disease		EFO:0000408		A collective term for nutritional disorders resulting from poor absorption or nutritional imbalance, and metabolic disorders resulting from defects in biosynthesis (ANABOLISM) or breakdown (CATABOLISM) of endogenous substances.		
+OTAR:0000021	has_disease_location						owl:AnnotationProperty

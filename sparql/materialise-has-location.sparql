@@ -10,7 +10,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 CONSTRUCT {
   ?cls a owl:Class .
-	?cls <http://www.ebi.ac.uk/efo/EFO_0000784> ?location .
+	?cls <http://www.ebi.ac.uk/efo/OTAR_0000021> ?location .
 }
 
 WHERE 
