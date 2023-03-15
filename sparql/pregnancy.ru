@@ -16,5 +16,5 @@ WHERE {
 	?c a owl:Class .
 	?c rdfs:subClassOf ?p .
 	?c rdfs:label ?label .
-	FILTER ((regex(str(?c), "http://www.ebi.ac.uk/efo/EFO_0009683"))||(regex(str(?c), "http://www.ebi.ac.uk/efo/EFO_0009682"))||(regex(str(?c), "http://www.ebi.ac.uk/efo/OTAR_0000015")))
+	FILTER ((regex(str(?c), "http://www.ebi.ac.uk/efo/EFO_0009683"))||(regex(str(?c), "http://www.ebi.ac.uk/efo/EFO_0009682"))||(regex(str(?c), "http://www.ebi.ac.uk/efo/EFO_0010238"))||(regex(str(?c), "http://www.ebi.ac.uk/efo/OTAR_0000015")))
 }
