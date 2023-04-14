@@ -46,7 +46,8 @@ robot query -i ./build/ta_fixed.owl -u ./sparql/pregnancy.ru \
 	query -u ./sparql/hepatitis.ru \
 	query -u ./sparql/poisoning.ru \
 	query -u ./sparql/heart.ru \
-	query -u ./sparql/otherfix.ru -o efo_otar_profile.owl && echo "Fixed specific terms... Build complete!"
+	query -u ./sparql/otherfix.ru \
+	annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O http://www.ebi.ac.uk/efo/efo_otar_profile.owl -V  http://www.ebi.ac.uk/efo/releases/v`cat version.txt`/efo_otar_profile.owl -o efo_otar_profile.owl && echo "Fixed specific terms... Build complete!"
 # merge -i disease_to_phenotype.owl added to the above to add d2p module
 
 #old generation of slim file	
@@ -56,7 +57,8 @@ robot query -i ./build/ta_fixed.owl -u ./sparql/pregnancy.ru \
 robot query -i efo_otar_profile.owl -q ./sparql/obsolete.sparql obsolete.txt
 robot filter -i efo_otar_profile.owl -T obsolete.txt --select "annotations self" -o obsoletes.owl
 robot relax -i efo.owl query --query ./sparql/materialise-has-location.sparql ./build/has-disease-location.owl
-robot reason --input efo_otar_profile.owl merge -i ./build/has-disease-location.owl filter -T ./templates/allTAs.txt --select "annotations self descendants"  merge -i obsoletes.owl -o efo_otar_slim.owl
+robot reason --input efo_otar_profile.owl merge -i ./build/has-disease-location.owl filter -T ./templates/allTAs.txt --select "annotations self descendants"  merge -i obsoletes.owl \
+	annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O http://www.ebi.ac.uk/efo/efo_otar_slim.owl -V  http://www.ebi.ac.uk/efo/releases/v`cat version.txt`/efo_otar_slim.owl -o efo_otar_slim.owl
 
 robot verify -i efo_otar_profile.owl --queries ./sparql/deprecated.sparql ./sparql/no-label.sparql -O reports/
 
