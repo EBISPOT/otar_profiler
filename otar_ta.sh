@@ -10,7 +10,7 @@ robot template --template ./templates/subclasses.tsv --prefix "OTAR: http://www.
 robot merge -i ./build/new.owl -i ./build/subclasses.owl -i efo.owl \
 	filter --term-file ./templates/OTAR_terms.txt --select annotations \
 	query --query ./sparql/OTAR_therapeutic_areas.sparql ./build/tagged.owl && echo "Tagged the therapeutic areas..."
-robot merge -i ./build/new.owl -i ./build/subclasses.owl -i efo.owl -i ./build/tagged.owl -o ./build/done.owl && echo "Merged the templates..."
+robot merge -i ./build/new.owl -i ./build/subclasses.owl -i efo.owl -i ./build/tagged.owl query -u ./sparql/panc.ru -o ./build/done.owl && echo "Merged the templates..."
 #robot reason -i ./build/done.owl -s true -m true -r hermit -o ./build/efo_inferred.owl && echo "Reasoner done..."
 
 #The below needs to be run once and the relevant terms removed from the file. - should be updated to automatically do this.
@@ -33,7 +33,8 @@ robot query -i ./build/efo_ta.owl -u ./sparql/classify.ru \
 	query -u ./sparql/removedisease.ru \
 	query -u ./sparql/gastrodisease.ru \
 	remove -t "http://www.ebi.ac.uk/efo/EFO_0000405" \
-	query -u ./sparql/remove.ru -o ./build/ta_fixed.owl && echo "Fixed TAs and other category..."
+	query -u ./sparql/remove.ru \
+	query -u ./sparql/pancreas.ru -o ./build/ta_fixed.owl && echo "Fixed TAs and other category..."
 
 ### Fixing specific terms ###
 #1) moves puerperal, pregnancy and prenatal disorder terms to directly under the TA
@@ -47,7 +48,10 @@ robot query -i ./build/ta_fixed.owl -u ./sparql/pregnancy.ru \
 	query -u ./sparql/poisoning.ru \
 	query -u ./sparql/heart.ru \
 	query -u ./sparql/otherfix.ru \
+	query -u ./sparql/pancreas.ru \
 	annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O http://www.ebi.ac.uk/efo/efo_otar_profile.owl -V  http://www.ebi.ac.uk/efo/releases/v`cat version.txt`/efo_otar_profile.owl -o efo_otar_profile.owl && echo "Fixed specific terms... Build complete!"
+
+
 # merge -i disease_to_phenotype.owl added to the above to add d2p module
 
 #old generation of slim file	
@@ -62,3 +66,5 @@ robot reason --input efo_otar_profile.owl merge -i ./build/has-disease-location.
 
 robot verify -i efo_otar_profile.owl --queries ./sparql/deprecated.sparql ./sparql/no-label.sparql -O reports/
 
+robot convert -i efo_otar_profile.owl -f json -o efo_otar_profile.json
+robot convert -i efo_otar_slim.owl -f json -o efo_otar_slim.json & echo "JSON files created"

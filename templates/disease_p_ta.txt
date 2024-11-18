@@ -63,3 +63,4 @@ http://purl.obolibrary.org/obo/MONDO_0044988
 http://purl.obolibrary.org/obo/MONDO_0043543
 http://purl.obolibrary.org/obo/MONDO_0100366
 http://purl.obolibrary.org/obo/MONDO_0016177
+http://www.ebi.ac.uk/efo/EFO_0022624

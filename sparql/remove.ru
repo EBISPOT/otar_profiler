@@ -6,7 +6,8 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX xml: <https://www.w3.org/TR/xml#>
 
-DELETE {?c rdfs:subClassOf <http://www.ebi.ac.uk/efo/OTAR_0000008> .}
+DELETE {?c rdfs:subClassOf <http://www.ebi.ac.uk/efo/OTAR_0000008> .
+		?c rdfs:subclass <http://www.ebi.ac.uk/efo/EFO_0001379> . }
 	
 WHERE {
 	?c a owl:Class .
