@@ -49,7 +49,7 @@ robot query -i ./build/ta_fixed.owl -u ./sparql/pregnancy.ru \
 	query -u ./sparql/heart.ru \
 	query -u ./sparql/otherfix.ru \
 	query -u ./sparql/pancreas.ru \
-	annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O http://www.ebi.ac.uk/efo/efo_otar_profile.owl -V  http://www.ebi.ac.uk/efo/releases/v`cat version.txt`/efo_otar_profile.owl -o efo_otar_profile.owl && echo "Fixed specific terms... Build complete!"
+	annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O http://www.ebi.ac.uk/efo/efo_otar_profile.owl -V  http://www.ebi.ac.uk/efo/releases/v`cat version.txt`/efo_otar_profile.owl query -u ./sparql/pancreas.ru	-o efo_otar_profile.owl && echo "Fixed specific terms... Build complete!"
 
 
 # merge -i disease_to_phenotype.owl added to the above to add d2p module
