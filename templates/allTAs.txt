@@ -5,7 +5,7 @@ http://www.ebi.ac.uk/efo/EFO_0010285
 http://www.ebi.ac.uk/efo/EFO_0001379
 http://www.ifomis.org/bfo/1.1/snap#Function
 http://www.ebi.ac.uk/efo/OTAR_0000006
-http://www.ebi.ac.uk/efo/EFO_0009605
+http://www.ebi.ac.uk/efo/EFO_0001379
 http://purl.obolibrary.org/obo/MONDO_0021205
 http://www.ebi.ac.uk/efo/EFO_0000618
 http://www.ebi.ac.uk/efo/EFO_0005803

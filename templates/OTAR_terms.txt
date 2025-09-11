@@ -15,7 +15,7 @@ http://www.ebi.ac.uk/efo/EFO_0001444
 http://www.ebi.ac.uk/efo/OTAR_0000020 
 http://www.ebi.ac.uk/efo/OTAR_0000006 
 http://purl.obolibrary.org/obo/MONDO_0045024 
-http://www.ebi.ac.uk/efo/EFO_0009605 
+http://www.ebi.ac.uk/efo/EFO_0001379 
 http://www.ebi.ac.uk/efo/EFO_0000651 
 http://www.ebi.ac.uk/efo/OTAR_0000014 
 http://purl.obolibrary.org/obo/MONDO_0002025 
