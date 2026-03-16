@@ -14,5 +14,5 @@ INSERT {
 	
 WHERE {
 	?metab a owl:Class .
-	FILTER ((regex(str(?metab), "http://www.ebi.ac.uk/efo/EFO_0000589"))) .
+	FILTER ((regex(str(?metab), "http://purl.obolibrary.org/obo/MONDO_0005066"))) .
 }

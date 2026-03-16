@@ -8,9 +8,9 @@ PREFIX xml: <https://www.w3.org/TR/xml#>
 
 DELETE {?ta rdfs:subClassOf <http://www.ebi.ac.uk/efo/OTAR_0000008> .}
 
-INSERT {?ta rdfs:subClassOf <http://www.ebi.ac.uk/efo/EFO_0000408> .}
+INSERT {?ta rdfs:subClassOf <http://purl.obolibrary.org/obo/MONDO_0000001> .}
 
 WHERE {
 	?ta a owl:Class .
 	?ta oio:inSubset "therapeutic_area" .
-	?ta rdfs:subClassOf <http://www.ebi.ac.uk/efo/EFO_0000408> .}
+	?ta rdfs:subClassOf <http://purl.obolibrary.org/obo/MONDO_0000001> .}

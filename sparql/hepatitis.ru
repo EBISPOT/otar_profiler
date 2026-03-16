@@ -11,6 +11,6 @@ DELETE {
 	
 WHERE {
 	?hep a owl:Class .
-	?hep rdfs:subClassOf <http://www.ebi.ac.uk/efo/EFO_0004196> .
+	?hep rdfs:subClassOf <http://purl.obolibrary.org/obo/MONDO_0006011> .
 
 }

@@ -7,13 +7,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX xml: <https://www.w3.org/TR/xml#>
 
 DELETE {
-	?pancreas rdfs:subClassOf <http://www.ebi.ac.uk/efo/EFO_0001379> .
+	?pancreas rdfs:subClassOf <http://purl.obolibrary.org/obo/MONDO_0005151> .
     ?pancreas rdfs:subClassOf <http://www.ebi.ac.uk/efo/EFO_0010282> . }
 
-INSERT {?ta rdfs:subClassOf <http://www.ebi.ac.uk/efo/EFO_0000408> .}
-	
-	
+INSERT {?ta rdfs:subClassOf <http://purl.obolibrary.org/obo/MONDO_0000001> .}
+
+
 WHERE {
 ?pancreas a owl:Class .
-FILTER ((regex(str(?pancreas), "http://www.ebi.ac.uk/efo/EFO_0009605"))) .
+FILTER ((regex(str(?pancreas), "http://purl.obolibrary.org/obo/MONDO_0002356"))) .
 }

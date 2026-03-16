@@ -7,7 +7,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX xml: <https://www.w3.org/TR/xml#>
 
 DELETE {
-	?tongue rdfs:subClassOf <http://www.ebi.ac.uk/efo/EFO_0000618>.}
+	?tongue rdfs:subClassOf <http://purl.obolibrary.org/obo/MONDO_0005071>.}
 	
 	
 WHERE {

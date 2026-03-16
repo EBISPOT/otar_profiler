@@ -10,7 +10,7 @@ DELETE {
 	?pericardium rdfs:subClassOf <http://purl.obolibrary.org/obo/MONDO_0000651> .}
 	
 INSERT {
-	?pericardium rdfs:subClassOf <http://www.ebi.ac.uk/efo/EFO_0003777> .}
+	?pericardium rdfs:subClassOf <http://purl.obolibrary.org/obo/MONDO_0005267> .}
 	
 WHERE {
 	?pericardium a owl:Class .
